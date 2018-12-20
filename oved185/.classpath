@@ -4,6 +4,10 @@
 	<classpathentry kind="src" path="src"/>
 	<classpathentry kind="src" path="test"/>
 	<classpathentry kind="con" path="org.eclipse.jdt.junit.JUNIT_CONTAINER/5"/>
+<<<<<<< HEAD
 	<classpathentry kind="lib" path="C:/ORACLE_db/jdbc/lib/ojdbc8.jar"/>
+=======
+	<classpathentry kind="lib" path="C:/oracle_db/jdbc/lib/ojdbc8.jar"/>
+>>>>>>> branch 'master' of https://github.com/AlessioBosco/oved185.git
 	<classpathentry kind="output" path="bin"/>
 </classpath>
