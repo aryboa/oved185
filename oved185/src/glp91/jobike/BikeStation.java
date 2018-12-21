@@ -3,11 +3,12 @@ package glp91.jobike;
 import java.util.HashMap;
 
 public class BikeStation {
-	
+
 	private HashMap<String, Bike> bikes;
-	
+
 	private String nameStation;
-	
+	private int maxNum;
+
 	public String getNameStation() {
 		return nameStation;
 	}
@@ -16,14 +17,15 @@ public class BikeStation {
 		this.nameStation = nameStation;
 	}
 
-	public BikeStation() {
-		
+	public BikeStation(String nameStation, int maxNum) {
+		this.bikes = new HashMap<>();
+		this.maxNum = maxNum;
 	}
-	
-	public BikeStation(HashMap bikes) {
-		this.bikes = bikes;
-		
-	}
+
+//	public BikeStation(HashMap<String, Bike> bikes) {
+//		this.bikes = bikes;
+//
+//	}
 
 	public HashMap<String, Bike> getBikes() {
 		return bikes;
@@ -32,28 +34,27 @@ public class BikeStation {
 	public void setBikes(HashMap<String, Bike> bikes) {
 		this.bikes = bikes;
 	}
-	
-	
-	public void addNewBike (String id, Bike bike) {
+
+	public void addNewBike(String id, Bike bike) {
 		this.bikes.put(id, bike);
 	}
-	
-	public Bike searchBike (String id) {
+
+	public Bike searchBike(String id) {
 		if (this.bikes.containsKey(id)) {
 			return this.bikes.get(id);
 		} else {
-		return null;
+			return null;
 		}
 	}
-	public boolean removeBike (String id) {
-		boolean flag=false;
+
+	public boolean removeBike(String id) {
+		boolean flag = false;
 		if (this.bikes.containsKey(id)) {
-		this.bikes.remove(id);
-		flag=true;
+			this.bikes.remove(id);
+			flag = true;
 		}
 		return flag;
-	
+
 	}
-	
 
 }
