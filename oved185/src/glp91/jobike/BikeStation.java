@@ -3,7 +3,7 @@ package glp91.jobike;
 import java.util.HashMap;
 
 public class BikeStation {
-
+	static final int DEFAULT_BIKES_NO = 10;
 	private HashMap<String, Bike> bikes;
 
 	private String nameStation;
@@ -17,6 +17,12 @@ public class BikeStation {
 		this.nameStation = nameStation;
 	}
 
+	public BikeStation() {
+		this.bikes = new HashMap<>();
+		this.maxNum = 10;
+		this.nameStation = "Unknown";
+	}
+	
 	public BikeStation(String nameStation, int maxNum) {
 		this.bikes = new HashMap<>();
 		this.maxNum = maxNum;
